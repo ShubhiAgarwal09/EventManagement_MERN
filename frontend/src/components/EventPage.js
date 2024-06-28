@@ -68,6 +68,15 @@ const EventPage = () => {
         <p><strong>Hosted by:</strong> {event.host}</p>
         <p><strong>Attendees:</strong> {event.attendees.length} / {event.maxAttendees}</p>
         {user && (
+          <>
+          <div className="attendee-list">
+            <h3>Attendees:</h3>
+            {event.attendees && event.attendees.length > 0 ? (
+              <p>{event.attendees.map(attendee => attendee.username).join(', ')}</p>
+            ) : (
+              <p>No attendees yet.</p>
+            )}
+          </div>
           <div className="rsvp-buttons">
             {event.attendees.some(attendee => attendee._id === user.id) ? (
               <button className="btn cancel-rsvp" onClick={handleCancelRSVP}>Cancel RSVP</button>
@@ -75,6 +84,7 @@ const EventPage = () => {
               <button className="btn rsvp" onClick={handleRSVP}>RSVP</button>
             )}
           </div>
+          </>
         )}
       </div>
 
