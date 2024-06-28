@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h2>Event Management System</h2>
+      <h2>Pramata Event Management System</h2>
       <div className="nav-links">
         <Link to="/" className="nav-link">Home</Link>
         {user ? (
