@@ -9,18 +9,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// MongoDB connection
 mongoose.connect("mongodb+srv://arva-food:arva@cluster0.dlezxso.mongodb.net/arva-coffee?retryWrites=true&w=majority&appName=Cluster0", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
 
-// Import routes
+
 const authRoutes = require('./routes/auth');
 const eventRoutes = require('./routes/events');
 const rsvpRoutes = require('./routes/rsvp');
 const commentRoutes = require('./routes/comments');
 
-// Use routes
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/rsvp', rsvpRoutes);

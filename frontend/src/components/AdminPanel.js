@@ -32,7 +32,7 @@ const navigate = useNavigate();
       });
       console.log("Responseeee", response.status)
       if (response.status) {
-        navigate(`/events/${response.data._id}`);  // Assuming response.data._id is the event ID
+        navigate(`/events/${response.data._id}`);
       }
     } catch (error) {
       console.error('Event creation error:', error);

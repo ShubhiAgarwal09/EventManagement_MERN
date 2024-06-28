@@ -22,7 +22,7 @@ code {
 
 .nav-links {
   display: flex;
-  gap: 100px; /* Adjust spacing between items */
+  gap: 100px;
 }
 
 .nav-link {
@@ -38,6 +38,6 @@ code {
 }
 
 .nav-item {
-  margin-left: 10px; /* Adjust spacing between items */
+  margin-left: 10px;
 }
 
