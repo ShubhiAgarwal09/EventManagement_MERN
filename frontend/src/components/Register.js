@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './Register.css'
 
 const Register = () => {
   const navigate = useNavigate(); // useNavigate returns a function to navigate
@@ -20,9 +21,9 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className="register-container">
       <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="register-form">
         <input
           type="text"
           value={username}

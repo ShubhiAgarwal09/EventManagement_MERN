@@ -1,0 +1,101 @@
+.event-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.event-details {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.event-details h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.event-banner {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.rsvp-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.rsvp {
+    background-color: #28a745;
+    color: white;
+}
+
+.cancel-rsvp {
+    background-color: #dc3545;
+    color: white;
+}
+
+.comments-section {
+    margin-top: 30px;
+}
+
+.comments-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.comment-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-comment {
+    background-color: #007bff;
+    color: white;
+}
+
+.comments-list {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.comment {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 20px;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import './Navbar.css'
 
 const Navbar = () => {
   const { user, logout } = useAuth();
-  const history = useNavigate();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -13,23 +13,23 @@ const Navbar = () => {
   };
 
   return (
-    <nav>
+    <nav className="navbar">
       <h2>Event Management System</h2>
-      <ul>
-        <li><Link to="/">Home</Link></li>
+      <div className="nav-links">
+        <Link to="/" className="nav-link">Home</Link>
         {user ? (
           <>
-            <li>{user.username}</li>
-            <li><button onClick={handleLogout}>Logout</button></li>
+            <span className="nav-item">{user.username}</span>
+            <button onClick={handleLogout} className="nav-item">Logout</button>
           </>
         ) : (
           <>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/register">Register</Link></li>
+            <Link to="/login" className="nav-link">Login</Link>
+            <Link to="/register" className="nav-link">Register</Link>
           </>
         )}
-        {user?.isAdmin && <li><Link to="/admin">Admin Panel</Link></li>}
-      </ul>
+        {user?.isAdmin && <Link to="/admin" className="nav-link">Admin Panel</Link>}
+      </div>
     </nav>
   );
 };

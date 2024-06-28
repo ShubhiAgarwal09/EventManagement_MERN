@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import './AdminPanel.css';
 
 const AdminPanel = () => {
 const navigate = useNavigate();
@@ -39,9 +40,9 @@ const navigate = useNavigate();
   };
 
   return (
-    <div>
+    <div className="adminpanel-container">
       <h2>Admin Panel</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="adminpanel-form">
         <input type="text" value={title} onChange={e => setTitle(e.target.value)} placeholder="Title" required />
         <textarea value={description} onChange={e => setDescription(e.target.value)} placeholder="Description" required></textarea>
         <input type="datetime-local" value={date} onChange={e => setDate(e.target.value)} required />

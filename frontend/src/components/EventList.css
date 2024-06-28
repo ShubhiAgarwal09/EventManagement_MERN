@@ -1,0 +1,19 @@
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.event-tile-left,
+.event-tile-right {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .event-tile-left,
+    .event-tile-right {
+        width: 100%;
+    }
+}
