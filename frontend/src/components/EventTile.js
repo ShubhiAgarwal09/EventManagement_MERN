@@ -9,7 +9,7 @@ const EventTile = ({ event }) => {
       <p>{event.description}</p>
       <p>{new Date(event.date).toLocaleDateString()}</p>
       <p>{event.location}</p>
-      <Link to={`/event/${event._id}`}>View Event</Link>
+      <Link to={`/events/${event._id}`}>View Event</Link>
     </div>
   );
 };
