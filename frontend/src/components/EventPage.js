@@ -78,11 +78,21 @@ const EventPage = () => {
             )}
           </div>
           <div className="rsvp-buttons">
-            {event.attendees.some(attendee => attendee._id === user.id) ? (
+            {event.attendees.some(attendee => attendee.username === user.username) ? (
+              <>       
               <button className="btn cancel-rsvp" onClick={handleCancelRSVP}>Cancel RSVP</button>
+              </>
             ) : (
-              <button className="btn rsvp" onClick={handleRSVP}>RSVP</button>
+              event.maxAttendees > event.attendees.length &&
+                <button className="btn rsvp" onClick={handleRSVP}>RSVP</button>
             )}
+          </div>
+          <div>
+            {
+              event.maxAttendees < event.attendees.length && (
+                <p>No more spots left</p>
+              )
+            }
           </div>
           </>
         )}

@@ -13,7 +13,6 @@ mongoose.connect("mongodb+srv://arva-food:arva@cluster0.dlezxso.mongodb.net/arva
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
 
-
 const authRoutes = require('./routes/auth');
 const eventRoutes = require('./routes/events');
 const rsvpRoutes = require('./routes/rsvp');

@@ -13,7 +13,6 @@ const navigate = useNavigate();
   const [location, setLocation] = useState('');
   const [banner, setBanner] = useState('');
   const [maxAttendees, setMaxAttendees] = useState('');
-  const [host, setHost] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
